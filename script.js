@@ -41,4 +41,16 @@ document.addEventListener('DOMContentLoaded', function () {
             dropdownContent.style.display = 'none';
         }
     });
+
+    // Mobile warning
+    const mobileWarning = document.getElementById('mobile-warning');
+    const closeBtn = document.querySelector('.close-btn');
+
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+        mobileWarning.style.display = 'block';
+    }
+
+    closeBtn.addEventListener('click', function() {
+        mobileWarning.style.display = 'none';
+    });
 });
