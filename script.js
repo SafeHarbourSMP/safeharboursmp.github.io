@@ -297,6 +297,17 @@ window.teleportToPlayer = teleportToPlayer;
 function showFallback() {
     if (bluemapIframe) bluemapIframe.style.display = 'none';
     if (fallback) fallback.style.display = 'flex';
+
+    // Disable map controls
+    const mapControls = document.querySelector('.map-controls');
+    if (mapControls) {
+        mapControls.classList.add('disabled');
+    }
+
+    // Hide player list panel
+    if (playerListPanel) {
+        playerListPanel.style.display = 'none';
+    }
 }
 
 // =====================================================
