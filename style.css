@@ -4,16 +4,20 @@ html {
 
 body {
     font-family: 'Press Start 2P', cursive;
-    background-color: #1a1a1a; /* Dark background */
-    color: #ffffff; /* White text */
+    background-color: #1a1a1a;
+    /* Dark background */
+    color: #ffffff;
+    /* White text */
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 header {
-    background-color: #003366; /* Dark Blue */
-    border-bottom: 5px solid #ffcc00; /* Yellow */
+    background-color: #003366;
+    /* Dark Blue */
+    border-bottom: 5px solid #ffcc00;
+    /* Yellow */
     padding: 1rem;
 }
 
@@ -27,7 +31,8 @@ header {
     display: flex;
     align-items: center;
     font-size: 2rem;
-    color: #ffcc00; /* Yellow */
+    color: #ffcc00;
+    /* Yellow */
     width: 250px;
 }
 
@@ -63,9 +68,11 @@ nav a {
 
 
 .join-btn {
-    background-color: #800000; /* Maroon */
+    background-color: #800000;
+    /* Maroon */
     color: #ffffff;
-    border: 2px solid #ffcc00; /* Yellow */
+    border: 2px solid #ffcc00;
+    /* Yellow */
     padding: 0.5rem 1rem;
     font-family: 'Press Start 2P', cursive;
     cursor: pointer;
@@ -74,9 +81,11 @@ nav a {
 }
 
 .join-btn-header {
-    background-color: #008000; /* Green */
+    background-color: #008000;
+    /* Green */
     color: #ffffff;
-    border: 2px solid #00ff00; /* Bright Green */
+    border: 2px solid #00ff00;
+    /* Bright Green */
     padding: 0.5rem 1rem;
     font-family: 'Press Start 2P', cursive;
     cursor: pointer;
@@ -85,13 +94,17 @@ nav a {
 }
 
 .join-btn-header:hover {
-    background-color: #00ff00; /* Bright Green */
-    color: #008000; /* Green */
+    background-color: #00ff00;
+    /* Bright Green */
+    color: #008000;
+    /* Green */
 }
 
 .join-btn:hover {
-    background-color: #ffcc00; /* Yellow */
-    color: #800000; /* Maroon */
+    background-color: #ffcc00;
+    /* Yellow */
+    color: #800000;
+    /* Maroon */
 }
 
 .hero {
@@ -108,7 +121,8 @@ nav a {
 
 .hero h1 {
     font-size: 4rem;
-    color: #ffcc00; /* Yellow */
+    color: #ffcc00;
+    /* Yellow */
     margin-bottom: 1rem;
 }
 
@@ -120,11 +134,13 @@ nav a {
 
 .socials-section {
     padding: 1rem;
-    background-color: #800000; /* Maroon */
+    background-color: #800000;
+    /* Maroon */
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ffcc00; /* Yellow */
+    border: 2px solid #ffcc00;
+    /* Yellow */
 }
 
 .social-links {
@@ -142,12 +158,14 @@ nav a {
 
 .info-section {
     padding: 2rem 1rem;
-    background-color: #003366; /* Dark Blue */
+    background-color: #003366;
+    /* Dark Blue */
 }
 
 .info-section h2 {
     font-size: 2.5rem;
-    color: #ffcc00; /* Yellow */
+    color: #ffcc00;
+    /* Yellow */
     margin-bottom: 2rem;
 }
 
@@ -161,19 +179,22 @@ nav a {
 .reason {
     background-color: #1a1a1a;
     padding: 1.5rem;
-    border: 2px solid #800000; /* Maroon */
+    border: 2px solid #800000;
+    /* Maroon */
     width: 250px;
 }
 
 .reason h3 {
-    color: #ffcc00; /* Yellow */
+    color: #ffcc00;
+    /* Yellow */
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 footer {
     background-color: #1a1a1a;
-    border-top: 5px solid #800000; /* Maroon */
+    border-top: 5px solid #800000;
+    /* Maroon */
     padding: 2rem 1rem;
 }
 
@@ -207,15 +228,168 @@ footer {
 
 .server-map-section h2 {
     font-size: 2.5rem;
-    color: #ffcc00; /* Yellow */
-    margin-bottom: 2rem;
+    color: #ffcc00;
+    /* Yellow */
+    margin-bottom: 1.5rem;
 }
 
-.map-container {
-    position: relative;
+/* Map Controls Panel */
+.map-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #003366;
+    border: 3px solid #800000;
+    border-radius: 4px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-label {
+    color: #ffcc00;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.map-btn {
+    background-color: #800000;
+    color: #ffffff;
+    border: 2px solid #ffcc00;
+    padding: 0.5rem 1rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.map-btn:hover {
+    background-color: #ffcc00;
+    color: #800000;
+    transform: translateY(-2px);
+}
+
+.map-btn.active {
+    background-color: #ffcc00;
+    color: #800000;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.coordinates-display {
+    display: flex;
+    gap: 1rem;
+    color: #ffffff;
+    font-size: 0.7rem;
+    background-color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border: 2px solid #003366;
+    border-radius: 4px;
+}
+
+.coordinates-display span {
+    color: #ffcc00;
+}
+
+/* Map Wrapper with Sidebar */
+.map-wrapper {
+    display: flex;
+    gap: 0;
     width: 80%;
     margin: 0 auto;
-    padding-top: 45%; /* 16:9 Aspect Ratio */
+}
+
+/* Player List Sidebar */
+.player-list-panel {
+    width: 0;
+    overflow: hidden;
+    background-color: #003366;
+    border: 3px solid #800000;
+    border-right: none;
+    transition: width 0.3s ease;
+    flex-shrink: 0;
+}
+
+.player-list-panel.visible {
+    width: 220px;
+}
+
+.player-list-panel h3 {
+    color: #ffcc00;
+    font-size: 0.9rem;
+    padding: 1rem;
+    margin: 0;
+    border-bottom: 2px solid #800000;
+    background-color: #002244;
+}
+
+.player-list {
+    padding: 0.5rem;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.player-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #1a1a1a;
+    border: 2px solid #800000;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.player-item:hover {
+    background-color: #800000;
+    border-color: #ffcc00;
+}
+
+.player-avatar {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #ffcc00;
+    image-rendering: pixelated;
+}
+
+.player-name {
+    color: #ffffff;
+    font-size: 0.6rem;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.player-coords {
+    color: #ffcc00;
+    font-size: 0.5rem;
+}
+
+.no-players,
+.loading-players {
+    color: #888888;
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Map Container */
+.map-container {
+    position: relative;
+    flex-grow: 1;
+    padding-top: 45%;
+    /* 16:9 Aspect Ratio */
 }
 
 .map-container iframe {
@@ -224,7 +398,8 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 5px solid #003366; /* Dark Blue */
+    border: 5px solid #003366;
+    /* Dark Blue */
 }
 
 #map-fallback {
@@ -236,18 +411,64 @@ footer {
     height: 100%;
     text-align: center;
     background-color: #1a1a1a;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #map-fallback img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
-    border: 5px solid #800000; /* Maroon */
+    border: 5px solid #800000;
+    /* Maroon */
 }
 
 #map-fallback p {
     font-size: 1.5rem;
-    color: #ffcc00; /* Yellow */
+    color: #ffcc00;
+    /* Yellow */
     margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .map-controls {
+        max-width: 95%;
+        padding: 0.75rem;
+    }
+
+    .map-wrapper {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .player-list-panel {
+        width: 100% !important;
+        border-right: 3px solid #800000;
+        border-bottom: none;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+    }
+
+    .player-list-panel.visible {
+        max-height: 200px;
+        width: 100% !important;
+    }
+
+    .map-container {
+        padding-top: 75%;
+        /* Taller ratio on mobile */
+    }
+
+    .control-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .map-btn {
+        font-size: 0.6rem;
+        padding: 0.4rem 0.8rem;
+    }
 }
 
 /* Scrollbar Styles */

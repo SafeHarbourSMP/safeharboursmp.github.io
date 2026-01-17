@@ -74,29 +74,43 @@
 
         <section id="server-map" class="server-map-section">
             <h2>Server Map</h2>
-            <div class="map-container">
-                <iframe id="bluemap-iframe" src="http://66.59.208.121:8100/#world:0:0:0:1500:0:0:0:0:perspective"
-                    width="100%" height="600px"></iframe>
-                <script>
-                    const iframeRef = document.getElementById('bluemap-iframe');
-                    // Wait for the iframe to load
-                    iframeRef.onload = function () {
-                        // Example: Set camera position
-                        iframeRef.contentWindow.postMessage(
-                            {
-                                type: 'updatePosition',
-                                x: 0,
-                                y: 64,
-                                z: 0
-                            },
-                            ''
-                        );
-                    };
-                </script>
-                <div id="map-fallback">
-                    <img src="images/Temp.png" alt="Map failed to load">
-                    <p>Sorry, Map failed to load</p>
-                    <a href="http://66.59.208.121:8100/" target="_blank" class="join-btn">Go to Map</a>
+
+            <!-- Map Controls Panel -->
+            <div class="map-controls">
+                <div class="control-group">
+                    <span class="control-label">View Mode:</span>
+                    <button id="btn-perspective" class="map-btn active" title="Perspective View">3D</button>
+                    <button id="btn-flat" class="map-btn" title="Flat View">2D</button>
+                    <button id="btn-freeflight" class="map-btn" title="Free Flight">Free</button>
+                </div>
+                <div class="control-group">
+                    <button id="btn-reset-view" class="map-btn" title="Reset View">Reset</button>
+                    <button id="btn-toggle-players" class="map-btn" title="Show/Hide Player List">Players</button>
+                </div>
+                <div class="coordinates-display" id="coordinates">
+                    <span>X: <span id="coord-x">0</span></span>
+                    <span>Y: <span id="coord-y">64</span></span>
+                    <span>Z: <span id="coord-z">0</span></span>
+                </div>
+            </div>
+
+            <div class="map-wrapper">
+                <!-- Player List Sidebar -->
+                <div class="player-list-panel" id="player-list-panel">
+                    <h3>Online Players</h3>
+                    <div class="player-list" id="player-list">
+                        <p class="loading-players">Loading...</p>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe id="bluemap-iframe" src="http://66.59.208.121:8100/#world:0:0:0:1500:0:0:0:0:perspective"
+                        allowfullscreen></iframe>
+                    <div id="map-fallback">
+                        <img src="images/Temp.png" alt="Map failed to load">
+                        <p>Sorry, Map failed to load</p>
+                        <a href="http://66.59.208.121:8100/" target="_blank" class="join-btn">Go to Map</a>
+                    </div>
                 </div>
             </div>
         </section>
