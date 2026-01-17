@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +9,13 @@
     <link rel="icon" type="image/x-icon" href="images/icon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="mobile-warning">
         <div class="mobile-warning-content">
             <span class="close-btn">&times;</span>
-            <p>For the best experience, please view this website on a desktop computer or enable desktop mode in your browser.</p>
+            <p>For the best experience, please view this website on a desktop computer or enable desktop mode in your
+                browser.</p>
         </div>
     </div>
     <header>
@@ -23,7 +26,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="http://66.59.208.121:8100/" target="_blank">Server Map</a></li>
                     <li><a href="#socials">Socials</a></li>
-                    
+
                 </ul>
             </nav>
             <div class="join-btn-container">
@@ -72,7 +75,23 @@
         <section id="server-map" class="server-map-section">
             <h2>Server Map</h2>
             <div class="map-container">
-                <iframe id="map-iframe" src="http://66.59.208.121:8100/" frameborder="0" allowfullscreen></iframe>
+                <iframe id="bluemap-iframe" src="https://example.com" width="100%" height="600px"></iframe>
+                <script>
+                    const iframeRef = document.getElementById('bluemap-iframe');
+                    // Wait for the iframe to load
+                    iframeRef.onload = function () {
+                        // Example: Set camera position
+                        iframeRef.contentWindow.postMessage(
+                            {
+                                type: 'updatePosition',
+                                x: 0,
+                                y: 64,
+                                z: 0
+                            },
+                            ''
+                        );
+                    };
+                </script>
                 <div id="map-fallback">
                     <img src="images/Temp.png" alt="Map failed to load">
                     <p>Sorry, Map failed to load</p>
@@ -94,4 +113,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
